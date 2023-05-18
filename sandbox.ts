@@ -1,74 +1,62 @@
-// const character = "hamza";
-// console.log(character);
+// explicit types
 
-// const inputs = document.querySelectorAll("input");
-// console.log(inputs);
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
 
-// inputs.forEach((input) => {
-//   console.log(input);
-// });
+// age = 'luigi';
+age = 30;
 
+// isLoggedIn = 25;
+isLoggedIn = true;
 
-let character = "hamza";
-let age = 30;
-let isBlackBelt = false;
-
-// character = 20;
-character = "mario";
-
-// age = "yoshi";
-age = 40;
-
-// isBlackBelt = "yes";
-isBlackBelt = true;
-
-const circ = (diameter: number) => {
-  return diameter * Math.PI;
-};
-
-console.log(circ(4.7));
+console.log(isLoggedIn);
 
 // arrays
-let names = ["luigi", "mario", "yoshi"];
 
-names.push("toad");
-// names.push(3);
-// names[0] = 3;
+let names: string[] = [];
+
+// names = ['luigi', 'mario', 'yoshi'];
+
+names.push('toad');
+
 console.log(names);
 
+// union types
 
-let numbers = [10, 20, 30, 40];
+let mixes: (string | number | boolean)[] = [];
+mixes.push('Good Morning');
+mixes.push(11);
+mixes.push(true);
 
-numbers.push(25);
-// numbers.push("shaun");
-// numbers[1] = "shaun";
-console.log(numbers);
+console.log(mixes);
 
-let mixed = ["ken", 4, "chun-li", 8, 9];
+let uid: string | number;
 
-mixed.push("ryu");
-mixed.push(10);
-mixed[0] = 3;
-console.log(mixed);
+uid = '123';
+uid = 123;
+
+console.log(uid);
 
 // objects
-let ninja = {
-    name: "mario",
-    belt: "black",
+
+let user: object;
+
+user = {
+    name: 'luigi',
     age: 30
-};
+}
 
-ninja.age = 40;
-ninja.name = "ryu";
-// ninja.age = "30";
+console.log(user);
 
-// ninja.skills = ["fighting", "sneaking"]
+let user2: {
+    name: string,
+    age: number,
+    isLoggedIn: boolean
+}
 
-ninja = {
-    name: "yoshi",
-    belt: "orange",
-    age: 40,
-    // skills: []
-};
-
-console.log(ninja);
+user2 = {
+    name: 'mario',
+    age: 25,
+    isLoggedIn: true
+}

@@ -3,46 +3,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TypeScript Tutorial</title>
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="m-0 font-roboto">
 
-  <div class="wrapper">
-    <h1>Finance Logger</h1>
+  <div class="mx-auto max-w-4xl">
+    <h1 class="m-auto text-center text-pink-600 my-10">Finance Logger</h1>
 
     <!-- output list -->
-    <ul class="item-list">
+    <ul class="p-0 list-none">
       
     </ul>
   </div>
 
-  <footer>
-    <form class="new-item-form">
-      <div class="field">
-        <label>Type:</label>
-        <select id="type">
+  <footer class="bg-gray-200 py-16 mt-16">
+    <form class="mx-auto max-w-4xl text-center">
+      <div class="inline-block mx-2">
+        <label class="block font-bold text-sm text-gray-700 mb-2">Type:</label>
+        <select id="type" class="p-1 border border-gray-300 rounded">
           <option value="invoice">Invoice</option>
           <option value="payment">Payment</option>
         </select>
       </div>
-      <div class="field">
-        <label>To / From:</label>
-        <input type="text" id="tofrom">
+      <div class="inline-block mx-2">
+        <label class="block font-bold text-sm text-gray-700 mb-2">To / From:</label>
+        <input type="text" id="tofrom" class="p-1 border border-gray-300 rounded">
       </div>   
-      <div class="field">
-        <label>Details:</label>
-        <input type="text" id="details">
+      <div class="inline-block mx-2">
+        <label class="block font-bold text-sm text-gray-700 mb-2">Details:</label>
+        <input type="text" id="details" class="p-1 border border-gray-300 rounded">
       </div>
-      <div class="field">
-        <label>Amount (£):</label>
-        <input type="number" id="amount">
+      <div class="inline-block mx-2">
+        <label class="block font-bold text-sm text-gray-700 mb-2">Amount (£):</label>
+        <input type="number" id="amount" class="p-1 border border-gray-300 rounded">
       </div>
-      <button>Add</button>
+      <button class="text-white bg-pink-600 py-1 px-2 rounded min-w-20">Add</button>
     </form>
 
-    <a href="https://www.thenetninja.co.uk">The Net Ninja</a>
+    <a href="https://www.thenetninja.co.uk" class="block text-center text-gray-500 mt-10 text-xs">The Net Ninja</a>
   </footer>
 
   <script src='sandbox.js'></script>
 </body>
 </html>
+
