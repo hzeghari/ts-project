@@ -1,62 +1,31 @@
-// explicit types
 
-let character: string;
-let age: number;
-let isLoggedIn: boolean;
 
-// age = 'luigi';
-age = 30;
+// type any
 
-// isLoggedIn = 25;
-isLoggedIn = true;
+let size: any = 123;
 
-console.log(isLoggedIn);
+size = '123';
+console.log(size);
+size = true;
+console.log(size);
+size = { name: '123' };
+console.log(size);
 
-// arrays
 
-let names: string[] = [];
+let mix: any[] = [];
 
-// names = ['luigi', 'mario', 'yoshi'];
+mix.push(1);
+mix.push('1');
+mix.push(true);
+mix.push({ name: '1' });
 
-names.push('toad');
+console.log(mix);
 
-console.log(names);
 
-// union types
+let person: { name: any, age: any };
 
-let mixes: (string | number | boolean)[] = [];
-mixes.push('Good Morning');
-mixes.push(11);
-mixes.push(true);
+person = { name: '123', age: 123 };
+console.log(person);
 
-console.log(mixes);
-
-let uid: string | number;
-
-uid = '123';
-uid = 123;
-
-console.log(uid);
-
-// objects
-
-let user: object;
-
-user = {
-    name: 'luigi',
-    age: 30
-}
-
-console.log(user);
-
-let user2: {
-    name: string,
-    age: number,
-    isLoggedIn: boolean
-}
-
-user2 = {
-    name: 'mario',
-    age: 25,
-    isLoggedIn: true
-}
+person = { name: 123, age: '123' };
+console.log(person);

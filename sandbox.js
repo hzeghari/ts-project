@@ -1,37 +1,19 @@
-// explicit types
-var character;
-var age;
-var isLoggedIn;
-// age = 'luigi';
-age = 30;
-// isLoggedIn = 25;
-isLoggedIn = true;
-console.log(isLoggedIn);
-// arrays
-var names = [];
-// names = ['luigi', 'mario', 'yoshi'];
-names.push('toad');
-console.log(names);
-// union types
-var mixes = [];
-mixes.push('Good Morning');
-mixes.push(11);
-mixes.push(true);
-console.log(mixes);
-var uid;
-uid = '123';
-uid = 123;
-console.log(uid);
-// objects
-var user;
-user = {
-    name: 'luigi',
-    age: 30
-};
-console.log(user);
-var user2;
-user2 = {
-    name: 'mario',
-    age: 25,
-    isLoggedIn: true
-};
+// type any
+var size = 123;
+size = '123';
+console.log(size);
+size = true;
+console.log(size);
+size = { name: '123' };
+console.log(size);
+var mix = [];
+mix.push(1);
+mix.push('1');
+mix.push(true);
+mix.push({ name: '1' });
+console.log(mix);
+var person;
+person = { name: '123', age: 123 };
+console.log(person);
+person = { name: 123, age: '123' };
+console.log(person);
